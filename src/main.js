@@ -4,17 +4,13 @@ import { createApp } from 'vue'
 import { createWebHistory, createRouter } from 'vue-router' // Use createWebHistory here
 import App from './components/App.vue'
 import About from './components/About.vue'
-import Body from './components/Body.vue'
+import AddTask from './components/AddTask.vue'
+import Home from './components/Home.vue'
 
 const routes = [
-  {
-    path: '/',
-    component: App,
-    children: [
-      { path: '/', component: Body },
-      { path: '/about', component: About },
-    ],
-  },
+  { path: '/', component: Home },
+  { path: '/about', component: About },
+  { path: '/add-task', component: AddTask },
 ]
 
 const router = createRouter({
